@@ -4,9 +4,10 @@ USER root
 
 RUN apt-get update && apt-get install -y collectd
 RUN apt-get install monit -y
+RUN apt-get install gettext -y
 
 # collectd configuration
-ADD collectd.conf /etc/collectd/collectd.conf
+ADD collectd.conf /tmp/collectd.conf
 
 # monit configuration
 ADD monitrc /etc/monit/monitrc
