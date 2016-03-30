@@ -8,7 +8,7 @@ The available plugins to collect metrics are listed [here](https://collectd.org/
 
 ## Run the container:
 
-`docker run -d -p 25826:25826/udp collectd/myversion`
+`docker run -d -p 25826:25826/udp -e "COLLECTD_SERVER=<server_ip_address>" collectd/myversion`
 
 ## SSH into the container:
 
