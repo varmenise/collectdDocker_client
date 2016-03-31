@@ -18,6 +18,12 @@ ADD monit.collectd /etc/monit/conf.d/collectd
 RUN chown root:root /etc/monit/conf.d/collectd
 RUN chmod 700 /etc/monit/conf.d/collectd
 
+# jmx configuration
+ADD jmxremote.access /usr/lib/jvm/jmxremote.access
+ADD jmxremote.password /usr/lib/jvm/jmxremote.password
+chmod 600 usr/lib/jvm/jmxremote.access
+chmod 600 usr/lib/jvm/jmxremote.password
+
 # Add the run script
 ADD start_container.sh /tmp/run.sh
 
