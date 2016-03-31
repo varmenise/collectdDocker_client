@@ -12,7 +12,6 @@ The following metrics are currently retrieved:
 * load (system load)
 * memory (physical memory utilization)
 * swap (memory currently written onto hard disk)
-* users (number of users currently logged into the system) 
 * java
  * classes (Number of classes loaded by the JVM)
  * compilation (Time spent by the JVM compiling or optimizing)
