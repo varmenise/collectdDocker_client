@@ -38,8 +38,9 @@ Start your java process with the following arguments
 
 Grant the owner of the process access to the jmxremote authentication files
 
-sudo chown <owner> /usr/lib/jvm/jmxremote.access
-sudo chown <owner> /usr/lib/jvm/jmxremote.password
+`sudo chown <owner> /usr/lib/jvm/jmxremote.access`
+
+`sudo chown <owner> /usr/lib/jvm/jmxremote.password`
 
 ## SSH into the container:
 
