@@ -25,7 +25,7 @@ The following metrics are currently retrieved:
 
 ## Run the container:
 
-`docker run -d -p 25826:25826/udp -e "COLLECTD_SERVER=<server_ip_address>" -e "JMX_PORT=<THE_JMX_PORT_OF_YOUR_JMX_AGENT>" collectd/myversion`
+`docker run -d -p 25826:25826/udp -e "COLLECTD_SERVER=<server_ip_address>" -e "JMX_PORT=<THE_JMX_PORT_OF_YOUR_JMX_AGENT>" -e "CLIENT_MASTER=<client_master_unique_name>" collectd/myversion`
 
 # Configure the jxm agent
 
