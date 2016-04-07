@@ -21,10 +21,9 @@ RUN chmod 700 /etc/monit/conf.d/collectd
 # jmx configuration
 COPY jmxremote.* /usr/lib/jvm/
 RUN chmod 600 /usr/lib/jvm/jmxremote.*
+RUN chown jenkins /usr/lib/jvm/jmxremote.*
 
 # Add the run script
 COPY start_container.sh /tmp/run.sh
-
-EXPOSE 25826
 
 ENTRYPOINT ["/bin/tini", "--", "/tmp/run.sh"]
