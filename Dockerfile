@@ -1,4 +1,4 @@
-FROM java:8-jdk
+FROM  cloudbees/pse-master
 
 USER root
 
@@ -27,4 +27,4 @@ COPY start_container.sh /tmp/run.sh
 
 EXPOSE 25826
 
-ENTRYPOINT ["/bin/bash","/tmp/run.sh"]
+ENTRYPOINT ["/bin/tini", "--", "/tmp/run.sh"]
